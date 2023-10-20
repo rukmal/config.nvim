@@ -265,4 +265,7 @@ else
     -- (alt is A)
     vim.keymap.set({"n", "v"}, "<A-j>", ":m .+1<CR>==", { desc = "Move line up" }) -- move line up
     vim.keymap.set({"n", "v"}, "<A-k>", ":m .-2<CR>==", { desc = "Move line down" }) -- move line down
+
+    -- Keybindings to launch NavBuddy
+    vim.keymap.set("n", "<leader>n", ":Navbuddy<CR>", { desc = "Launch NavBuddy symbol navigator"})
 end
