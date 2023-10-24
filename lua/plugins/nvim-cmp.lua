@@ -29,10 +29,10 @@ return {
             -- 		behavior = cmp.ConfirmBehavior.Replace,
             -- 	}),
             -- })
---            opts.sources = cmp.config.sources(vim.list_extend(opts.sources, {
+            opts.sources = cmp.config.sources(vim.list_extend(opts.sources, {
 --                { name = "ballerina-lsp", priority = 100 },
---                { name = "copilot" }
---            }))
+                { name = "copilot" }
+            }))
         end,
     }
 }

@@ -2,22 +2,31 @@ return {
     "nvimdev/dashboard-nvim",
     event = "VimEnter",
     opts = function()
-        local logo = [[
-              &&&                                                               
-              &&&                   /////////\                                  
-              &&&&                  //      ///                                 
-             &&&&&                  //       ///       ////       //  /////     
-            &&& &&&                 //       //     //      //    ///      ///  
-           &&&   &&&                /////////      //       ///   //        //  
-          &&&     &&&               //     //      ///////////    //        //  
-        &&&&       &&&&             //      ///    ///            //        //  
-      &&&&           &&&&           //        //     /////////    //        //  
-    &&&&               &&&&                                                     
-  &&&&                   &&&&                                                   
-    ]]
-
-        logo = string.rep("\n", 8) .. logo .. "\n\n"
-
+        local lines_from = function(file)
+            local lines = ""
+            for line in io.lines(file) do
+                lines = lines .. "\n" .. line
+            end
+            return lines
+        end
+--        local logo = [[
+--              &&&                                                               
+--              &&&                   /////////\                                  
+--              &&&&                  //      ///                                 
+--             &&&&&                  //       ///       ////       //  /////     
+--            &&& &&&                 //       //     //      //    ///      ///  
+--           &&&   &&&                /////////      //       ///   //        //  
+--          &&&     &&&               //     //      ///////////    //        //  
+--        &&&&       &&&&             //      ///    ///            //        //  
+--      &&&&           &&&&           //        //     /////////    //        //  
+--    &&&&               &&&&                                                     
+--  &&&&                   &&&&                                                   
+--    ]]
+--
+--        logo = string.rep("\n", 8) .. logo .. "\n\n"
+--
+        local logo = lines_from("/Users/rukmal/.config/nvim/assets/ren_logo.txt")
+        logo = logo .. "\n\n\n\n"
         local opts = {
             theme = "doom",
             hide = {
