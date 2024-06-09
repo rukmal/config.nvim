@@ -28,6 +28,11 @@ else
 			proto = "proto",
 		},
 	})
+    vim.filetype.add({
+        extension = {
+            fbs = "fbs",
+        },
+    })
 
 	-- Need function to check if a current LSP is running (if so return ID)
 	-- If true, attach the current buffer (in filetype autocmd) to the client ID
@@ -53,7 +58,6 @@ else
 	end
 
 	local lsp = require("lspconfig")
-
 	local python_root_files = {
 		"pyproject.toml",
 		"setup.py",
@@ -63,7 +67,6 @@ else
 		"pyrightconfig.json",
 		".git",
 	}
-
 	--    vim.lsp.start({
 	--        name = "ballerina-ls",
 	--        cmd = { "bal", "start-language-server" },
@@ -100,6 +103,14 @@ else
 	--
 	--
 	lsp.pyright.setup({})
+
+    lsp.rust_analyzer.setup({})
+    lsp.rust_analyzer.setup({
+        on_attach = function(client, bufnr)
+            vim.lsp.inlay_hint.enable(true)
+        end
+    })
+
 	-- lsp.ballerina_ls.setup({})
 
 	--local
@@ -261,4 +272,7 @@ else
 
 	-- Keybindings to launch NavBuddy
 	vim.keymap.set("n", "<leader>n", ":Navbuddy<CR>", { desc = "Launch NavBuddy symbol navigator" })
+
+    -- Set conceallevel to 0
+    vim.opt.conceallevel = 0
 end

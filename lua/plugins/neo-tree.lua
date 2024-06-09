@@ -2,6 +2,9 @@ return {
     "nvim-neo-tree/neo-tree.nvim",
     opts = {
         filesystem = {
+            window = {
+                position = "float"
+            },
             filtered_items = {
                 visible = true,
                 show_hidden_count = true,

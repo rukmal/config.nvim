@@ -1,9 +1,11 @@
 return {
     "neovim/nvim-lspconfig",
-    opts = {
-        inlay_hints = { enabled = true },
-    },
+    event = "LazyFile",
     dependencies = {
+        { "folke/neoconf.nvim", cmd = "Neoconf", config = false, dependencies = { "nvim-lspconfig" } },
+        { "folke/neodev.nvim", opts = {} },
+        "mason.nvim",
+        "williamboman/mason-lspconfig.nvim",
         {
             "SmiteshP/nvim-navbuddy",
             dependencies = {
@@ -12,5 +14,8 @@ return {
             },
             opts = { lsp = { auto_attach = true } }
         }
+    },
+    opts = {
+        inlay_hints = { enabled = true },
     },
 }
