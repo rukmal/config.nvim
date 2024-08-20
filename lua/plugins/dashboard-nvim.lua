@@ -25,7 +25,7 @@ return {
 --
 --        logo = string.rep("\n", 8) .. logo .. "\n\n"
 --
-        local logo = lines_from("/Users/rukmal/.config/nvim/assets/ren_logo.txt")
+        local logo = lines_from("/home/rukmal/.config/nvim/assets/ren_logo.txt")
         logo = logo .. "\n\n\n\n"
         local opts = {
             theme = "doom",
