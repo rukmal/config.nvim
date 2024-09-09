@@ -18,7 +18,8 @@ return {
         "catppuccin/nvim",
         name = "catppuccin",
         opts = {
-            flavour = "latte", -- latte, frappe, macchiato, mocha
+            transparent_background = true,
+            flavour = "mocha", -- latte, frappe, macchiato, mocha
             integrations = {
                 cmp = true,
                 gitsigns = true,
