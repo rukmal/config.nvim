@@ -38,6 +38,16 @@ return {
                     StatusLineNC = { bg = "#608CFF" } -- For non-active window status lines (horizontal split border)
                 }
             end,
+            highlight_overrides = {
+                all = {
+                    VertSplit = { fg = "#608CFF" },
+                    StatusLine = { fg = "#FFFFFF", bg = "#608CFF" },
+                    StatusLineNC = { fg = "#FFFFFF", bg = "#608CFF" },
+                    -- Make floats opaque by setting a background color
+                    NormalFloat = { bg = "#1E1E2E" },  -- Opaque background for floating windows
+                    FloatBorder = { bg = "#1E1E2E", fg = "#608CFF" }, -- Border for floating windows
+                },
+            }
         },
         lazy = false
     },
