@@ -274,7 +274,7 @@ else
 	vim.keymap.set("n", "<leader>n", ":Navbuddy<CR>", { desc = "Launch NavBuddy symbol navigator" })
 
 	-- Keybindings to launch Zen Mode
-	vim.keymap.set("n", "<leader>wz", ":ZenMode<CR>", { desc = "Toggle Zen Mode" })
+	vim.keymap.set("n", "<leader>z", ":ZenMode<CR>", { desc = "Toggle Zen Mode" })
 
     -- Set conceallevel to 0
     vim.opt.conceallevel = 0
