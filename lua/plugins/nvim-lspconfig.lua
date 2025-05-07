@@ -2,7 +2,7 @@ return {
     "neovim/nvim-lspconfig",
     event = "LazyFile",
     dependencies = {
-        { "folke/neoconf.nvim", cmd = "Neoconf", config = false, dependencies = { "nvim-lspconfig" } },
+        -- { "folke/neoconf.nvim", cmd = "Neoconf", config = false, dependencies = { "nvim-lspconfig" } },
         "mason.nvim",
         "williamboman/mason-lspconfig.nvim",
         {
@@ -17,4 +17,6 @@ return {
     opts = {
         inlay_hints = { enabled = true },
     },
+    config = function()
+    end,
 }
