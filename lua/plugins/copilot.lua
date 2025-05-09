@@ -10,6 +10,9 @@ return {
 			filetypes = {
 				["*"] = true,
 			},
+			telemetry = {
+                telemetryLevel = "none", -- Disable telemetry
+            },
 		},
 	},
 	-- copilot cmp source

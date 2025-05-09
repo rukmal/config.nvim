@@ -265,6 +265,10 @@ else
 		{ noremap = true, silent = true, desc = "Close buffer (not window)" }
 	)
 
+	-- Keybindings for the Language Server Protocol (LSP)
+	-- Go to definition
+	vim.keymap.set('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', { desc = "Go to definition", noremap = true, silent = true })
+
 	-- Keybindings for moving lines up/down
 	-- (alt is A)
 	vim.keymap.set({ "n", "v" }, "<A-j>", ":m .+1<CR>==", { desc = "Move line up" }) -- move line up
@@ -278,4 +282,7 @@ else
 
     -- Set conceallevel to 0
     vim.opt.conceallevel = 0
+
+	-- Set nerd font to true
+	vim.g.have_nerd_font = true
 end
