@@ -267,7 +267,10 @@ else
 
 	-- Keybindings for the Language Server Protocol (LSP)
 	-- Go to definition
-	vim.keymap.set('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', { desc = "Go to definition", noremap = true, silent = true })
+	vim.keymap.set("n", "<leader>gd", '<cmd>lua vim.lsp.buf.definition()<CR>', { desc = "Go to definition", noremap = true, silent = true })
+	vim.keymap.set("n", "gd", '<cmd>lua vim.lsp.buf.definition()<CR>', { desc = "Go to definition", noremap = true, silent = true })
+	vim.keymap.set("n", "<leader>cr", '<cmd>lua vim.lsp.buf.rename()<CR>', { desc = "Rename symbol", noremap = true, silent = true })
+	vim.keymap.set("n", "cr", '<cmd>lua vim.lsp.buf.rename()<CR>', { desc = "Rename symbol", noremap = true, silent = true })
 
 	-- Keybindings for moving lines up/down
 	-- (alt is A)
