@@ -6,13 +6,13 @@ return {
     ft = { 'quarto' },
     dev = false,
     opts = {
-      lspFeatures = {
-        languages = { 'r', 'python', 'julia', 'bash', 'lua', 'html', 'dot', 'javascript', 'typescript', 'ojs', 'latex' },
-      },
-      codeRunner = {
-        enabled = true,
-        default_method = 'slime',
-      },
+      --lspFeatures = {
+      --  languages = { 'r', 'python', 'julia', 'bash', 'lua', 'html', 'dot', 'javascript', 'typescript', 'ojs', 'latex' },
+      --},
+      --codeRunner = {
+      --  enabled = true,
+      --  default_method = 'slime',
+      --},
     },
     dependencies = {
       -- for language features in code cells

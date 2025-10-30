@@ -4,7 +4,7 @@ return {
     dependencies = {
         -- { "folke/neoconf.nvim", cmd = "Neoconf", config = false, dependencies = { "nvim-lspconfig" } },
         "mason.nvim",
-        "williamboman/mason-lspconfig.nvim",
+        "mason-org/mason-lspconfig.nvim",
         {
             "SmiteshP/nvim-navbuddy",
             dependencies = {

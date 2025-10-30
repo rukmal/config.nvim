@@ -12,7 +12,7 @@ else
 	-- 		["md"] = true
 	-- 	},
 	-- })
-	require("leap").add_default_mappings()
+	require("leap")
 	vim.filetype.add({
 		extension = {
 			bal = "ballerina",
@@ -103,6 +103,11 @@ else
 	--
 	--
 	lsp.pyright.setup({})
+    lsp.pyright.setup({
+        on_attach = function(client, bufnr)
+            vim.lsp.inlay_hint.enable(true)
+        end
+    })
 
     lsp.rust_analyzer.setup({})
     lsp.rust_analyzer.setup({
