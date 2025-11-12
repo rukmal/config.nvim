@@ -214,41 +214,6 @@ else
 		end,
 		group = bal_lsp_group,
 	})
-	vim.opt.shiftwidth = 4
-	vim.opt.tabstop = 4
-	-- vim.opt.softtabstop = 4
-	vim.opt.expandtab = true -- Use spaces instead of tabs
-	vim.opt.smarttab = true
-	-- vim.opt.autoindent = false
-	vim.opt.smartindent = false -- causes indentation issues w/ closing bracket
-	vim.cmd.syntax = "enable"
-	vim.wo.wrap = true
-	vim.wo.linebreak = true
-	vim.wo.breakindent = true
-	vim.wo.relativenumber = true
-	-- Disable lsp autoformat
-	vim.g.autoformat = false
-	-- local rainbow_delimiters = require("rainbow-delimiters")
-	-- vim.g.rainbow_delimiters = {
-	-- 	strategy = {
-	-- 		[""] = rainbow_delimiters.strategy["global"],
-	-- 		commonlisp = rainbow_delimiters.strategy["local"],
-	-- 	},
-	-- 	query = {
-	-- 		[""] = "rainbow-delimiters",
-	-- 		lua = "rainbow-blocks",
-	-- 	},
-	-- 	highlight = {
-	-- 		"RainbowDelimiterRed",
-	-- 		"RainbowDelimiterYellow",
-	-- 		"RainbowDelimiterBlue",
-	-- 		"RainbowDelimiterOrange",
-	-- 		"RainbowDelimiterGreen",
-	-- 		"RainbowDelimiterViolet",
-	-- 		"RainbowDelimiterCyan",
-	-- 	},
-	-- 	blacklist = { "c", "cpp" },
-	-- }
 	-- Keybindings for jumping up/down half a page
 	-- See: https://youtu.be/KfENDDEpCsI?si=VOCbh9MPDrjyW-Me&t=203
 	vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Move down half a page" })
