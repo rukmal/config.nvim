@@ -109,7 +109,6 @@ else
         end
     })
 
-    lsp.rust_analyzer.setup({})
     lsp.rust_analyzer.setup({
         on_attach = function(client, bufnr)
             vim.lsp.inlay_hint.enable(true)
