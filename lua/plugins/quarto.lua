@@ -86,7 +86,7 @@ return {
         vim.fn.call('slime#config', {})
       end
       vim.keymap.set('n', '<leader>cm', mark_terminal, { desc = '[m]ark terminal' })
-      vim.keymap.set('n', '<leader>cs', set_terminal, { desc = '[s]et terminal' })
+      vim.keymap.set('n', '<leader>ct', set_terminal, { desc = '[t]erminal (set target)' })
     end,
   },
 
