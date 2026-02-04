@@ -80,6 +80,40 @@ return {
         end,
     },
     {
+        "kepano/flexoki-neovim",
+        name = "flexoki",
+        lazy = false,
+    },
+    {
+        "savq/melange-nvim",
+        lazy = false,
+    },
+    {
+        "ellisonleao/gruvbox.nvim",
+        lazy = false,
+        priority = 1000,
+        config = true,
+        opts = {},
+    },
+    {
+        "rose-pine/neovim",
+        name = "rose-pine",
+        lazy = false,
+    },
+    {
+        "daltonmenezes/aura-theme",
+        lazy = false,
+        priority = 1000,
+        config = function(plugin)
+            vim.opt.rtp:prepend(plugin.dir .. "/packages/neovim")
+        end,
+    },
+    {
+        "scottmckendry/cyberdream.nvim",
+        lazy = false,
+        priority = 1000,
+    },
+    {
         "LazyVim/LazyVim",
         opts = {
             colorscheme = "catppuccin-mocha"
